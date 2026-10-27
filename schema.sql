@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS catalogojogos 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci;
+
+USE catalogojogos;
+
+CREATE TABLE IF NOT EXISTS jogos (
+    codigo INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(250) NOT NULL UNIQUE,
+    link VARCHAR(250) DEFAULT NULL,
+    descricao TEXT DEFAULT NULL
+);
